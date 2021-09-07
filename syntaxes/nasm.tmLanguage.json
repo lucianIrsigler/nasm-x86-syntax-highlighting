@@ -58,17 +58,17 @@
 			},
 			{
 				"name":"support.type.property-name",
-				"match": "(eax|ebx|ecx|edx|esp|(^$ah)|al|bh|bl|ch|cl|dh|dl|0ah|_main)"
+				"match": "(eax|ebx|ecx|edx|esp|ah(?!(\\S))|al(?!(\\S))|bh(?!(\\S))|bl(?!(\\S))|ch(?!(\\S))|cl(?!(\\S))|dh(?!(\\S))|dl(?!(\\S))|0ah|_main|cx(?!(\\S)))"
 			},
 			{
 				"patterns": [
 					{
 						"name":"token.warn-token",
-						"match":"(?<=\\s)(\\w+)(?=:\\s(\\w+))|(?<=\\[)(\\w+)(?=\\])|(?<=\\spush\\s)(\\w+)"
+						"match":"(?<=\\s)(\\w+)(?=:\\s(\\w+))|(?<=\\[)(\\w+)(?=\\])|(?<=\\spush\\s)(\\w+)|(?=.*\\s(db|resb))(\\w+)"
 					},
 					{
 						"name":"token.info-token",
-						"match": "(ret|(db)|(^$dw)|(^$dd)|(^$dq)|(^$dt)|resb|byte|word|dword|qword|tword|oword|yword|zword)"}
+						"match": "(ret|(db(?!(\\w+)))|(dw(?!(\\w+)))|(dd(?!(\\w+)))|(dq(?!(\\w+)))|(dt(?!(\\w+)))|resb|resw|byte|word|dword|qword|tword|oword|yword|zword)"}
 				]
 			},
 			{
