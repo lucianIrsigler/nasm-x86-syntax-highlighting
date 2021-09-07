@@ -1,0 +1,16 @@
+{
+    "comments": {
+        // symbol used for single line comment. Remove this entry if your language does not support line comments
+        "lineComment": ";"
+    },
+    // symbols used as brackets
+    "brackets": [
+        ["[", "]"]
+    ],
+    
+    "wordPattern":{
+        "registers":[["eax","al","ah","ebx","bh","bl","ecx","ch","cl","edx","dh","dl"]],
+        
+    }
+    
+}
