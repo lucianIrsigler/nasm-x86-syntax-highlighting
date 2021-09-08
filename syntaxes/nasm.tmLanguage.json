@@ -23,11 +23,11 @@
 	"repository": {
 		"comments":{
 			"patterns": [{
-				"name":"comment.line",
+				"name":"comment",
 				"match":"(;)(.*)"
 		}]},
 		"strings": {
-			"name": "string.quoted.double",
+			"name": "meta.preprocessor.string",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
@@ -40,7 +40,7 @@
 		"operators":{
 			"patterns": [{
 				"name":"meta.preprocessor.numeric",
-				"match": "(add|mul|div|push|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|inc|dec)"
+				"match": "(pop|add|mul|div|push|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|inc|dec)"
 			}]},
 		"numbers":{
 			"patterns": [
@@ -53,46 +53,49 @@
 		"keywords":{
 			"patterns": [
 			{
+				"name":"support.type",
+				"match":"(_main)"
+			},
+			{
 				"name":"string.regexp",
 				"match": "(?<=(section|SECTION)\\s)(.\\w+)"
 			},
 			{
 				"name":"support.type.property-name",
-				"match": "(eax|ebx|ecx|edx|esp|ah(?!(\\S))|al(?!(\\S))|bh(?!(\\S))|bl(?!(\\S))|ch(?!(\\S))|cl(?!(\\S))|dh(?!(\\S))|dl(?!(\\S))|0ah|_main|cx(?!(\\S)))"
+				"match": "(eax|ebx|ecx|edx|esp|ah(?!(\\S))|al(?!(\\S))|bh(?!(\\S))|bl(?!(\\S))|ch(?!(\\S))|cl(?!(\\S))|dh(?!(\\S))|dl(?!(\\S))|0ah|cx(?!(\\S)))"
 			},
 			{
+				"name":"nasm.variable",
 				"patterns": [
 					{
-						"name":"token.warn-token",
-						"match":"(?<=\\s)(\\w+)(?=:\\s(\\w+))|(?<=\\[)(\\w+)(?=\\])|(?<=\\spush\\s)(\\w+)|(?=.*\\s(db|resb))(\\w+)"
+						"name":"meta.object-literal.key",
+						"match": "(ret|(db(?!(\\w+)))|(dw(?!(\\w+)))|(dd(?!(\\w+)))|(dq(?!(\\w+)))|(dt(?!(\\w+)))|resb|resw|byte|word|dword|qword|tword|oword|yword|zword)"
 					},
+				
 					{
-						"name":"token.info-token",
-						"match": "(ret|(db(?!(\\w+)))|(dw(?!(\\w+)))|(dd(?!(\\w+)))|(dq(?!(\\w+)))|(dt(?!(\\w+)))|resb|resw|byte|word|dword|qword|tword|oword|yword|zword)"}
+						"name":"entity.name.tag",
+						"match":"(?<=\\s)(\\w+)(?=:\\s(\\w+))|(?<=\\[)(\\w+)(?=\\])|(?<=\\spush\\s)(\\w+)|(?=.*\\s(db))(\\w+)"
+					}
 				]
 			},
 			{
+				"name":"nasm.function.general",
 				"patterns": [
 					{
-						"name":"token.debug-token",
-						"match": "(?<=\\b(call|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|extern))(\\s.*)"
+						"name":"invalid",
+						"match": "(?<=\\b(call|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|extern))(\\s\\w+)"
 					},
 					{
-						"name":"token.debug-token",
-						"match":"(^(\\w))(\\w+:)(?=\\n)"
+						"name":"invalid",
+						"match":"(^(\\w))(\\w+:)(?=\\n)(?<!_main)"
 					}
 				]
 				
 			},
 			{
-				"name":"keyword",
+				"name":"constant.language",
 				"match": "SECTION|section"
-			},
-			{
-				"name":"support.type",
-				"match": "_main"
 			}
-			
 			]
 		}
 	},
