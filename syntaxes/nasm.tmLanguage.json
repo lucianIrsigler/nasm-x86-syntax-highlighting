@@ -62,7 +62,7 @@
 			},
 			{
 				"name":"support.type.property-name",
-				"match": "(eax|ebx|ecx|edx|esp|ah(?!(\\S))|al(?!(\\S))|bh(?!(\\S))|bl(?!(\\S))|ch(?!(\\S))|cl(?!(\\S))|dh(?!(\\S))|dl(?!(\\S))|0ah|cx(?!(\\S)))"
+				"match": "(eax|ebx|ecx|edx|esp|ah(?!(\\S))|al(?!(\\S))|bh(?!(\\S))|bl(?!(\\S))|ch(?!(\\S))|cl(?!(\\S))|dh(?!(\\S))|dl(?!(\\S))|cx|0ah|ADSDAS23232(?!(\\S)))"
 			},
 			{
 				"name":"nasm.variable",

@@ -1,3 +1,7 @@
+## [1.1.2] - 14/09/2021
+- Added snippets
+- Fixed some grammer
+
 ## [1.1.0]
 - Dark+ is now default theme, so when you switch off the color theme, you still can get syntax highlighting
 - Changed scopes of all the grammer to scopes used by Dark+

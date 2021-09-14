@@ -1,7 +1,16 @@
 # NASM x86 syntax highlighting
 
-This extention highlights provides syntax highlighting for nasm x86 assembly language
+This extention highlights provides syntax highlighting and snippets for the nasm x86 assembly language
 
-It used default colours at the moment- I will create another extention with more custom colours- but will require a theme
+The snippets are the following- more will be added!:
 
-Thank you!
+|snippets      |
+| ------------ |
+|NASMforloop   |
+|NASMhelloworld|
+|NASMifloop    | 
+
+
+If you have any issues- click the "repository" link on the side and open an issue request- or also make a suggestion!
+
+Regards

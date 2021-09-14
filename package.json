@@ -7,13 +7,14 @@
     "publisher": "LucianIrsigler",
     "displayName": "nasm x86 syntax highlighting",
     "description": "syntax highlighting for nasm x86 assembly",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "icon": "icon/icon.png",
     "engines": {
         "vscode": "^1.59.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     
     "repository": {
@@ -30,6 +31,12 @@
         "x86"
     ],
     "contributes": {
+        "snippets": [
+            {
+                "language": "nasm",
+                "path": "./snippets/snippets.json"
+            }
+        ],
         "languages": [
             {
                 "id": "nasm",
