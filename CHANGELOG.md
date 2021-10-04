@@ -1,3 +1,11 @@
+## [1.1.5] - 01/10/2021
+- Fixed variable names
+- Added more keywords such as
+* imul
+* idiv
+* lea
+* ect
+
 ## [1.1.2] - 14/09/2021
 - Added snippets
 - Fixed some grammer
