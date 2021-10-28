@@ -10,8 +10,7 @@
     ],
     
     "wordPattern":{
-        "registers":[["eax","al","ah","ebx","bh","bl","ecx","ch","cl","edx","dh","dl"]],
-        "macros":["%"]
+        "registers":[["eax","al","ah","ebx","bh","bl","ecx","ch","cl","edx","dh","dl"]]
     }
     
 }

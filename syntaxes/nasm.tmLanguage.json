@@ -58,7 +58,7 @@
 			"patterns": [
 			{
 				"name":"support.type",
-				"match":"%define|%assign|%defstr|%deftok|%defalias|%undefalias|\\s%s\\s"
+				"match":"(%define|%assign|%defstr|%deftok|%defalias|%undefalias)"
 			},
 			{
 				"name":"support.type",
