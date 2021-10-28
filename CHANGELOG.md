@@ -1,3 +1,14 @@
+## [1.1.8]-23/10/2021
+- Added %macro syntax highlighting
+- NASMmacro snippet added
+- Added macro keywords:
+* %define
+* %assign
+* %defstr
+* %deftok
+* %defalias
+* %undefalias
+
 ## [1.1.6]- 11/10/2021
 - Fixed ax
 
