@@ -38,10 +38,17 @@
 			]
 		},
 		"operators":{
-			"patterns": [{
+			"patterns": [
+				{
 				"name":"meta.preprocessor.numeric",
 				"match": "(pop|add|mul|imul|idiv|div|push|lea|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|dec|(?<=\\s)inc(?!(w+))|and|or|xor|not|neg|shl|shr|%include)"
-			}]},
+			},
+			{
+				"name":"keyword.control",
+				"match":"%define|%assign|%defstr|%deftok|%defalias|%undefalias|\\s%s\\s"
+			}
+
+			]},
 		"numbers":{
 			"patterns": [
 				{
