@@ -1,4 +1,7 @@
-## [1.1.8]-23/10/2021
+## [1.1.9]-28/10/2021
+- Fixed macros
+
+## [1.1.8]-28/10/2021
 - Added %macro syntax highlighting
 - NASMmacro snippet added
 - Added macro keywords:

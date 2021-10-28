@@ -7,7 +7,7 @@
     "publisher": "LucianIrsigler",
     "displayName": "nasm x86 syntax highlighting",
     "description": "syntax highlighting for nasm x86 assembly",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "icon": "icon/icon.png",
     "engines": {
         "vscode": "^1.59.0"
