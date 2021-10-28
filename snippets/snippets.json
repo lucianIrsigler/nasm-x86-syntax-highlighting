@@ -102,6 +102,26 @@
         "\tret\r"
         ],
         "description": "Basic if-else conditional in nasm x86"
+        },
+        {
+            "prefix":"NASMmacro",
+            "body":[
+                "%define param(x,y)(x+y)\n",
+                "section .bss\n",
+                "section .data",
+                "\tformatout : db \"%d\"\n",
+                "section .text",
+                "\tglobal _main",
+                "\textern _printf\n",
+                "_main:",
+                "\tmov eax,param(2,3)",
+                "\tpush eax",
+                "\tpush formatout",
+                "\tcall _printf",
+                "\tadd esp,8",
+                "\tret"
+            ],
+            "description":"Basic macro usage"
         }
 ]
 
