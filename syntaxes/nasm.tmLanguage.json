@@ -57,7 +57,7 @@
 			
 			"patterns": [
 			{
-				"name":"entity.name.label",
+				"name":"support.type",
 				"match":"%define|%assign|%defstr|%deftok|%defalias|%undefalias|\\s%s\\s"
 			},
 			{
