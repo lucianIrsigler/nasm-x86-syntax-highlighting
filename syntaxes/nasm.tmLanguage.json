@@ -41,7 +41,11 @@
 			"patterns": [
 				{
 				"name":"meta.preprocessor.numeric",
-				"match": "(pop|add|mul|imul|idiv|div|push|lea|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|dec|(?<=\\s)inc(?!(w+))|and|or|xor|not|neg|shl|shr|%include)"
+				"match": "(pop|add|mul|imul|idiv|div|push|lea|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|dec|(?<=\\s)inc(?!(w+))|and|or|xor|not|neg|shl|shr)"
+			},
+			{
+				"name":"support.type",
+				"match": "(%include|%define|%assign|%defstr|%deftok|%defalias|%undefalias)|(%\\w+)"
 			}
 
 			]},
@@ -58,7 +62,7 @@
 			"patterns": [
 			{
 				"name":"support.type",
-				"match":"(_main|%define|%assign|%defstr|%deftok|%defalias|%undefalias)"
+				"match":"(_main)"
 			},
 			{
 				"name":"string.regexp",
