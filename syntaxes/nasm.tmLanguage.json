@@ -58,7 +58,7 @@
 			"patterns": [
 			{
 				"name":"support.type",
-				"match":"(_main|(%\\w+(?=\\s)))"
+				"match":"(_main|%define|%assign|%defstr|%deftok|%defalias|%undefalias)"
 			},
 			{
 				"name":"string.regexp",
