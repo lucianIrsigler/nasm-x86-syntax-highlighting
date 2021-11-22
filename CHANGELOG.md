@@ -1,7 +1,14 @@
-## [1.1.14]-04/11/2021
+## [1.2.0]
+- Date: 22 November 2021
+- Added snippets "NASMforloop2","NASMuserinput"
+- Updated snippet "NASMifloop" to allow user input
+
+## [1.1.14]
+- Date : 4 November 2021
 - Fixed macros
 
-## [1.1.8]-28/10/2021
+## [1.1.8]
+- Date: 28 October 2021
 - Added %macro syntax highlighting
 - NASMmacro snippet added
 - Added macro keywords:
@@ -12,10 +19,12 @@
 * %defalias
 * %undefalias
 
-## [1.1.6]- 11/10/2021
+## [1.1.6]
+- Date: 11 October 2021
 - Fixed ax
 
-## [1.1.5] - 01/10/2021
+## [1.1.5]
+- Date : 1 October 2021
 - Fixed variable names
 - Added more keywords such as
 * imul
@@ -23,7 +32,8 @@
 * lea
 * ect
 
-## [1.1.2] - 14/09/2021
+## [1.1.2]
+- Date: 14 September 2021
 - Added snippets
 - Fixed some grammer
 

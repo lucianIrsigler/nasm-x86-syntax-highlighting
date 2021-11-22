@@ -7,9 +7,11 @@ The snippets are the following:
 |snippets      |
 | ------------ |
 |NASMforloop   |
+|NASMforloop2  |
 |NASMhelloworld|
 |NASMifloop    |
 |NASMmacro     |
+|NASMuserinput |
 
 
 If you have any issues- click the "repository" link on the side and open an issue request- or also make a suggestion!
