@@ -45,7 +45,7 @@
 			},
 			{
 				"name":"support.type",
-				"match": "(%include|%define|%assign|%defstr|%deftok|%defalias|%undefalias)"
+				"match": "(^%)(include|define|assign|defstr|deftok|defalias|undefalias)"
 			}
 
 			]},

@@ -1,3 +1,13 @@
+## [1.2.1]
+- Date: 16 May 2022
+- Updated snippets:
+    - NASMifloop
+    - NASMuserinput - 
+    - NASMforloop -> changed variable names
+- Syntax:
+    - Regex changed for macros defining
+- New logo
+
 ## [1.2.0]
 - Date: 22 November 2021
 - Added snippets "NASMforloop2","NASMuserinput"
