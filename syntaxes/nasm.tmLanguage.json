@@ -1,0 +1,110 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "nasm x86 assembly",
+	
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include":"#strings"
+		},
+		{
+			"include":"#numbers"
+		},
+		{
+			"include":"#keywords"
+		},
+		{}
+	],
+	"repository": {
+		"comments":{
+			"patterns": [{
+				"name":"comment",
+				"match":"(;)(.*)"
+		}]},
+		"strings": {
+			"name": "meta.preprocessor.string",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operators":{
+			"patterns": [
+				{
+				"name":"meta.preprocessor.numeric",
+				"match": "(pop|add|mul|imul|idiv|div|push|lea|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|dec|(?<=\\s)inc(?!(w+))|and|or|xor|not|neg|shl|shr|cwtl|cltq|cqto)"
+			},
+			{
+				"name":"support.type",
+				"match": "(^%)(include|define|assign|pathsearch|depend|use|push|pop|defstr|deftok|defalias|undefalias|ifdef|ifmacro|ifctx|ifidn|ifidni|ifid|ifnum|ifstr|iftoken|ifempty|ifenv|elifdef|if|elif|else|endif|idefine|undef|strcat|strlen|substr|macro|endmacro|0|00|rotate|rep|endrep|unmacro|repl|arg|stacksize|local|error|warning|fatal|line)|(__NASM_VERSION_ID__|__NASM_VER__|__FILE__|__LINE__|__BITS__|__OUTPUT_FORMAT__|__DATE__|__TIME__|__DATE_NUM__|__TIME_NUM__|__UTC_DATE__|__UTC_TIME__|__UTC_DATE_NUM__|__UTC_TIME_NUM__|__POSIX_TIME__)|(struc|endstruc|istruc|at|iend|align|alignb|SECTALIGN)|^\\s*\\.\\w+"
+			}
+
+			]},
+		"numbers":{
+			"patterns": [
+				{
+					"name":"constant.numeric",
+					"match": "(?<!\\w)(\\d+)(?!\\w)"
+				}
+			]
+		},
+		"keywords":{	
+			"patterns": [
+			{
+				"name":"support.type",
+				"match":"(_main)|(test)"
+			},
+			{
+				"name":"string.regexp",
+				"match": "(?<=(section|SECTION)\\s)(.\\w+)"
+			},
+			{
+				"name":"support.type.property-name",
+				"match": "(eax|ebx|ecx|edx|esp|esi|edi|r8d|r9d|r10d|r11d|r12d|r13d|r14d|r15d|(?<!\\w)cx(?<!\\w)|(?<!\\w)dx(?!\\w)|(?<!\\w)bx(?!\\w)|(?<!\\w)si(?!\\w)|(?<!\\w)di(?!\\w)|(?<!\\w)sp(?!\\w)|(?<!\\w)bp(?!\\w)|(?<!\\w)ah(?!\\w)|(?<!\\w)al(?!\\w)|(?<!\\w)bh(?!\\w)|(?<!\\w)bl(?!\\w)|(?<!\\w)ch(?!\\w)|(?<!\\w)cl(?!\\w)|(?<!\\w)dh(?!\\w)|(?<!\\w)dl(?!\\w)|(?<!\\w)ax(?!\\w)|r8w|r9w|r10w|r11w|r12w|r13w|r14w|r15w|rax|rcx|rdx|rbx|rsi|rdi|rsp|rbp|r8|r9|r10|r11|r12|r13|r14|r15|0ah|sil|dil|spl|(?<=\\s|,)bpl|r8b|r9b|r10b|r11b|r12b|r13b|r14b|r15b)"
+			},
+			{
+				"name":"nasm.variable",
+				"patterns": [
+					{
+						"name":"meta.object-literal.key",
+						"match": "(ret|(db(?!(\\w+)))|(dw(?!(\\w+)))|(dd(?!(\\w+)))|(dq(?!(\\w+)))|(dt(?!(\\w+)))|resb|resd|resw|byte|word|dword|qword|tword|oword|yword|zword)"
+					},
+				
+					{
+						"name":"entity.name.tag",
+						"match":"(?<=\\s)(\\w+)(?=:\\s(\\w+))|(?<=\\[)(\\w+)(?=\\])|(?<=\\spush\\s)(\\w+)|(?=.*(db))(\\w+)"
+					}
+				]
+			},
+			{
+				"name":"nasm.function.general",
+				"patterns": [
+					{
+						"name":"invalid",
+						"match": "(?<=\\b(call|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|extern))(\\s\\w+)"
+					},
+					{
+						"name":"invalid",
+						"match":"(^(\\w))(\\w+:)(?=\\n)(?<!_main)"
+					}
+				]
+				
+			},
+			{
+				"name":"constant.language",
+				"match": "SECTION|section"
+			}
+			]
+		}
+	},
+	"scopeName": "source.asm"
+}
